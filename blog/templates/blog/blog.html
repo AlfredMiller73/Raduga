@@ -1,0 +1,74 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="wrapper bg-dark-white">
+    <!-- HEADING-BANNER START -->
+	<div class="heading-banner-area overlay-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading-banner">
+						<div class="heading-banner-title">
+							<h2>Новости</h2>
+						</div>
+						<div class="breadcumbs pb-15">
+							<ul>
+								<li><a href="/">Главная</a></li>
+								<li>Blog</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- HEADING-BANNER END -->
+	<!-- BLGO-AREA START -->
+	<div class="blog-area blog-2  pt-80 pb-80">
+		<div class="container">	
+			<div class="blog">
+				<div class="row">
+					{% for l in last %}
+					<!-- Single-blog start -->
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="single-blog mb-30">
+							<div class="blog-photo">
+								<a href="{{ l.get_absolute_url }}"><img src="{{ l.image.url }}" alt="" /></a>
+							</div>
+							<div class="blog-info"> 
+								<div class="post-meta fix">
+									<div class="post-year floatleft">
+										<p class="text-uppercase text-dark-red mb-0">{{ l.date }}</p>
+										<h4 class="post-title"><a href="{{ l.get_absolute_url }}" tabindex="0">{{ l.title }}</a></h4>
+									</div>
+								</div>
+								<p>{{ l.posted }}</p>
+								<a href="{{ l.get_absolute_url }}" class="button-2 text-dark-red">Читать далее...</a>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+					<!-- Single-blog end -->
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Pagination start -->
+						<div class="shop-pagination  text-center">
+							<div class="pagination">
+								<ul>
+									<li><a href="#"><i class="zmdi zmdi-long-arrow-left"></i></a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Pagination end -->							
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- BLGO-AREA END -->		
+</div>
+{% endblock %}

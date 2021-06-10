@@ -1,0 +1,70 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- HEADING-BANNER START -->
+			<div class="heading-banner-area overlay-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="heading-banner">
+								<div class="heading-banner-title">
+									<h2>Контакты</h2>
+								</div>
+								<div class="breadcumbs pb-15">
+									<ul>
+										<li><a href="/">Главная</a></li>
+										<li>Контакты</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- HEADING-BANNER END -->
+			<!-- contact-us-AREA START -->
+			<div class="contact-us-area  pt-80 pb-80">
+				<div class="container">	
+					<div class="contact-us customer-login bg-white">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+								<div class="contact-details">
+									<h4 class="title-1 title-border text-uppercase mb-30">контакты</h4>
+									<ul>
+										<li>
+											<i class="zmdi zmdi-pin"></i>
+											<span>ул. Ротная, д.37</span>
+											<span>Псков, Россия</span>
+										</li>
+										<li>
+											<i class="zmdi zmdi-phone"></i>
+											<span>+880 1234 123456</span>
+										</li>
+										<li>
+											<i class="zmdi zmdi-email"></i>
+											<span>company-email@gmail.com</span>
+										</li>
+									</ul>
+								</div>
+								<div class="send-message mt-60">
+									<form action="{% static 'app/mail.php' %}">
+										<h4 class="title-1 title-border text-uppercase mb-30">Оставить сообщение</h4>
+										<input type="text" name="name" placeholder="Ваше имя..." />
+										<input type="text" name="email" placeholder="Ваша эл.почта..." />
+										<textarea class="custom-textarea" name="message" placeholder="Ваше сообщение..."></textarea>
+										<button class="button-one submit-button mt-20" data-text="Отправить" type="submit">Отправить сообщение</button>
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 mt-xs-30">
+								<div class="map-area">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2125.9296813433607!2d28.344666316011125!3d57.80254298115091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c019269f9f9f25%3A0x6683a655557e9ed!2z0KDQvtGC0L3QsNGPINGD0LsuLCAzNywg0J_RgdC60L7Qsiwg0J_RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sIDE4MDAwNA!5e0!3m2!1sru!2sru!4v1623179498521!5m2!1sru!2sru" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ABOUT-US-AREA END -->
+{% endblock %}

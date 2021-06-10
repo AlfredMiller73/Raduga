@@ -1,0 +1,122 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- WRAPPER START -->
+<div class="wrapper bg-dark-whit">
+    <!-- HEADING-BANNER START -->
+    <div class="heading-banner-area overlay-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading-banner">
+                        <div class="heading-banner-title">
+                            <h2>Каталог</h2>
+                        </div>
+                        <div class="breadcumbs pb-15">
+                            <ul>
+                                <li><a href="/">Главная</a></li>
+                                <li>Каталог</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HEADING-BANNER END -->
+    <!-- PRODUCT-AREA START -->
+    <div class="product-area pt-80 pb-80 product-style-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-12 col-xs-12">
+                    <!-- Shop-Content End -->
+                    <div class="shop-content mt-tab-30 mt-xs-30">
+                        <div class="product-option mb-30 clearfix">
+                            <!-- Nav tabs -->
+                            <ul class="shop-tab">
+                                <li class="active"><a href="#grid-view" data-toggle="tab"><i class="zmdi zmdi-view-module"></i></a></li>
+                                <li><a href="#list-view"  data-toggle="tab"><i class="zmdi zmdi-view-list"></i></a></li>
+                            </ul>
+                            <div class="showing text-right hidden-xs">
+                                <p class="mb-0">Показна 1 из 1 страниц всех категорий</p>
+                            </div>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="grid-view">                                   
+                                <div class="row shop-list">
+                                    <!-- Single-product start -->
+                                    {% for product in products %}
+                                    <div class="col-lg-12">
+                                        <div class="single-product clearfix">
+                                            <div class="product-img">
+                                                <a href="{{ product.get_absolute_url }}"><img src="{{ product.image.url }}" alt="" /></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="fix">
+                                                    <h4 class="post-title floatleft">
+                                                        <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                                                    </h4>
+                                                </div>
+                                                <div class="product-description">
+                                                    <p>{{ product.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    <!-- Single-product end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pagination start -->
+                        <div class="shop-pagination  text-center">
+                            <div class="pagination">
+                                <ul>
+                                    <li class="active"><a href="#"><i class="zmdi zmdi-long-arrow-left"></i></a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Pagination end -->
+                    </div>
+                    <!-- Shop-Content End -->
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <!-- Widget-Search start -->
+                    <aside class="widget widget-search mb-30">
+                        <form action="#">
+                            <input type="text" placeholder="Поиск..." />
+                            <button type="submit">
+                                <i class="zmdi zmdi-search"></i>
+                            </button>
+                        </form>
+                    </aside>
+                    <!-- Widget-search end -->
+                    <!-- Widget-Categories start -->
+                    <aside class="widget widget-categories  mb-30">
+                        <div class="widget-title">
+                            <h4>Категории</h4>
+                        </div>
+                        <div id="cat-treeview"  class="widget-info product-cat boxscrol2">
+                            <ul>
+                                <li {% if not category %} class="active" {% endif %}>
+                                    <a href="{% url 'product:ProductList' %}">Все</a>
+                                </li>
+                                {% for cat in categories %}
+						        <li {% if category.slug == cat.slug %} class="active" {% endif %}>
+						            <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
+						        </li>
+						        {% endfor %}
+                            </ul>
+                        </div>
+                    </aside>
+                    <!-- Widget-categories end -->
+                </div>
+            </div>
+        </div>
+    </div><!-- PRODUCT-AREA END -->
+</div>
+{% endblock %}

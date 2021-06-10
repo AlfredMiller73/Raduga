@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>Raduga</Name>
+    <RootNamespace>Raduga</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
+    <WebBrowserPort>7000</WebBrowserPort>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9dcf6fef-3c69-43d9-afc0-b8afd43af79d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>Raduga.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <PythonRunWebServerCommandType />
+    <PythonDebugWebServerCommandType />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\forms.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="blog\admin.py" />
+    <Compile Include="blog\apps.py" />
+    <Compile Include="blog\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="blog\migrations\__init__.py" />
+    <Compile Include="blog\models.py" />
+    <Compile Include="blog\tests.py" />
+    <Compile Include="blog\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="blog\views.py" />
+    <Compile Include="blog\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="product\admin.py" />
+    <Compile Include="product\apps.py" />
+    <Compile Include="product\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="product\migrations\__init__.py" />
+    <Compile Include="product\models.py" />
+    <Compile Include="product\tests.py" />
+    <Compile Include="product\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="product\views.py" />
+    <Compile Include="product\__init__.py" />
+    <Compile Include="Raduga\__init__.py" />
+    <Compile Include="Raduga\settings.py" />
+    <Compile Include="Raduga\urls.py" />
+    <Compile Include="Raduga\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\app\" />
+    <Folder Include="app\static\app\css\" />
+    <Folder Include="app\static\app\fonts\" />
+    <Folder Include="app\static\app\img\" />
+    <Folder Include="app\static\app\img\banner\" />
+    <Folder Include="app\static\app\img\bg\" />
+    <Folder Include="app\static\app\img\blog\" />
+    <Folder Include="app\static\app\img\brand\" />
+    <Folder Include="app\static\app\img\cart\" />
+    <Folder Include="app\static\app\img\discount\" />
+    <Folder Include="app\static\app\img\footer\" />
+    <Folder Include="app\static\app\img\lightbox\" />
+    <Folder Include="app\static\app\img\logo\" />
+    <Folder Include="app\static\app\img\megamenu\" />
+    <Folder Include="app\static\app\img\payment\" />
+    <Folder Include="app\static\app\img\product\" />
+    <Folder Include="app\static\app\img\reviewer\" />
+    <Folder Include="app\static\app\img\single-product\" />
+    <Folder Include="app\static\app\img\single-product\large\" />
+    <Folder Include="app\static\app\img\single-product\medium\" />
+    <Folder Include="app\static\app\img\single-product\small\" />
+    <Folder Include="app\static\app\img\slider\" />
+    <Folder Include="app\static\app\img\slider\slider-1\" />
+    <Folder Include="app\static\app\img\slider\slider-2\" />
+    <Folder Include="app\static\app\img\team\" />
+    <Folder Include="app\static\app\js\" />
+    <Folder Include="app\static\app\js\vendor\" />
+    <Folder Include="app\static\app\lib\" />
+    <Folder Include="app\static\app\lib\css\" />
+    <Folder Include="app\static\app\lib\img\" />
+    <Folder Include="app\static\app\lib\js\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="app\templates\registration\" />
+    <Folder Include="blog\" />
+    <Folder Include="blog\migrations\" />
+    <Folder Include="blog\templates\" />
+    <Folder Include="blog\templates\blog\" />
+    <Folder Include="media\" />
+    <Folder Include="product\" />
+    <Folder Include="product\migrations\" />
+    <Folder Include="product\templates\" />
+    <Folder Include="product\templates\product\" />
+    <Folder Include="Raduga\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\static\app\css\animate.css" />
+    <Content Include="app\static\app\css\bootstrap.min.css" />
+    <Content Include="app\static\app\css\default.css" />
+    <Content Include="app\static\app\css\jquery-ui.min.css" />
+    <Content Include="app\static\app\css\lightbox.min.css" />
+    <Content Include="app\static\app\css\material-design-iconic-font.css" />
+    <Content Include="app\static\app\css\meanmenu.min.css" />
+    <Content Include="app\static\app\css\responsive.css" />
+    <Content Include="app\static\app\css\shortcode.css" />
+    <Content Include="app\static\app\css\slick-theme.css" />
+    <Content Include="app\static\app\css\slick.css" />
+    <Content Include="app\static\app\css\style.css" />
+    <Content Include="app\static\app\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="app\static\app\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="app\static\app\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="app\static\app\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="app\static\app\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="app\static\app\img\banner\1.jpg" />
+    <Content Include="app\static\app\img\banner\2.jpg" />
+    <Content Include="app\static\app\img\banner\3.jpg" />
+    <Content Include="app\static\app\img\banner\4.jpg" />
+    <Content Include="app\static\app\img\banner\5.jpg" />
+    <Content Include="app\static\app\img\banner\6.jpg" />
+    <Content Include="app\static\app\img\bg\1.jpg" />
+    <Content Include="app\static\app\img\bg\about.png" />
+    <Content Include="app\static\app\img\bg\angel-down.png" />
+    <Content Include="app\static\app\img\bg\error.png" />
+    <Content Include="app\static\app\img\blog\1.jpg" />
+    <Content Include="app\static\app\img\blog\10.jpg" />
+    <Content Include="app\static\app\img\blog\2.jpg" />
+    <Content Include="app\static\app\img\blog\3.jpg" />
+    <Content Include="app\static\app\img\blog\4.jpg" />
+    <Content Include="app\static\app\img\blog\5.jpg" />
+    <Content Include="app\static\app\img\blog\6.jpg" />
+    <Content Include="app\static\app\img\blog\7.jpg" />
+    <Content Include="app\static\app\img\blog\8.jpg" />
+    <Content Include="app\static\app\img\blog\9.jpg" />
+    <Content Include="app\static\app\img\brand\1.png" />
+    <Content Include="app\static\app\img\brand\2.png" />
+    <Content Include="app\static\app\img\brand\3.png" />
+    <Content Include="app\static\app\img\brand\4.png" />
+    <Content Include="app\static\app\img\brand\5.png" />
+    <Content Include="app\static\app\img\cart\1.jpg" />
+    <Content Include="app\static\app\img\cart\2.jpg" />
+    <Content Include="app\static\app\img\discount\1.jpg" />
+    <Content Include="app\static\app\img\discount\2.jpg" />
+    <Content Include="app\static\app\img\discount\3.jpg" />
+    <Content Include="app\static\app\img\discount\4.jpg" />
+    <Content Include="app\static\app\img\discount\5.jpg" />
+    <Content Include="app\static\app\img\discount\6.jpg" />
+    <Content Include="app\static\app\img\discount\7.jpg" />
+    <Content Include="app\static\app\img\discount\8.jpg" />
+    <Content Include="app\static\app\img\favicon.ico" />
+    <Content Include="app\static\app\img\footer\1.jpg" />
+    <Content Include="app\static\app\img\lightbox\close.png" />
+    <Content Include="app\static\app\img\lightbox\loading.gif" />
+    <Content Include="app\static\app\img\lightbox\next.png" />
+    <Content Include="app\static\app\img\lightbox\prev.png" />
+    <Content Include="app\static\app\img\logo\logo.png" />
+    <Content Include="app\static\app\img\megamenu\1 - Copy.jpg" />
+    <Content Include="app\static\app\img\megamenu\1.jpg" />
+    <Content Include="app\static\app\img\payment\1.png" />
+    <Content Include="app\static\app\img\payment\2.png" />
+    <Content Include="app\static\app\img\payment\3.png" />
+    <Content Include="app\static\app\img\payment\4.png" />
+    <Content Include="app\static\app\img\product\1.jpg" />
+    <Content Include="app\static\app\img\product\10.jpg" />
+    <Content Include="app\static\app\img\product\11.jpg" />
+    <Content Include="app\static\app\img\product\12.jpg" />
+    <Content Include="app\static\app\img\product\2.jpg" />
+    <Content Include="app\static\app\img\product\3.jpg" />
+    <Content Include="app\static\app\img\product\4.jpg" />
+    <Content Include="app\static\app\img\product\5.jpg" />
+    <Content Include="app\static\app\img\product\6.jpg" />
+    <Content Include="app\static\app\img\product\7.jpg" />
+    <Content Include="app\static\app\img\product\8.jpg" />
+    <Content Include="app\static\app\img\product\9.jpg" />
+    <Content Include="app\static\app\img\product\dfghjphoto.jpg" />
+    <Content Include="app\static\app\img\product\quickview-photo.jpg" />
+    <Content Include="app\static\app\img\product\up-comming.jpg" />
+    <Content Include="app\static\app\img\reviewer\1.jpg" />
+    <Content Include="app\static\app\img\reviewer\2.png" />
+    <Content Include="app\static\app\img\reviewer\author.jpg" />
+    <Content Include="app\static\app\img\single-product\large\1.jpg" />
+    <Content Include="app\static\app\img\single-product\large\2.jpg" />
+    <Content Include="app\static\app\img\single-product\large\3.jpg" />
+    <Content Include="app\static\app\img\single-product\large\4.jpg" />
+    <Content Include="app\static\app\img\single-product\large\5.jpg" />
+    <Content Include="app\static\app\img\single-product\medium\1.jpg" />
+    <Content Include="app\static\app\img\single-product\medium\2.jpg" />
+    <Content Include="app\static\app\img\single-product\medium\3.jpg" />
+    <Content Include="app\static\app\img\single-product\medium\4.jpg" />
+    <Content Include="app\static\app\img\single-product\medium\5.jpg" />
+    <Content Include="app\static\app\img\single-product\small\1.jpg" />
+    <Content Include="app\static\app\img\single-product\small\2.jpg" />
+    <Content Include="app\static\app\img\single-product\small\3.jpg" />
+    <Content Include="app\static\app\img\single-product\small\4.jpg" />
+    <Content Include="app\static\app\img\single-product\small\5.jpg" />
+    <Content Include="app\static\app\img\slider\33.jpg" />
+    <Content Include="app\static\app\img\slider\slider-1\1.jpg" />
+    <Content Include="app\static\app\img\slider\slider-1\2.jpg" />
+    <Content Include="app\static\app\img\slider\slider-1\3.jpg" />
+    <Content Include="app\static\app\img\slider\slider-1\4.jpg" />
+    <Content Include="app\static\app\img\slider\slider-1\5.jpg" />
+    <Content Include="app\static\app\img\slider\slider-1\6.jpg" />
+    <Content Include="app\static\app\img\slider\slider-2\1.jpg" />
+    <Content Include="app\static\app\img\slider\slider-2\2.jpg" />
+    <Content Include="app\static\app\img\slider\slider-2\3.jpg" />
+    <Content Include="app\static\app\img\team\1.png" />
+    <Content Include="app\static\app\img\team\2.png" />
+    <Content Include="app\static\app\img\team\3.png" />
+    <Content Include="app\static\app\js\bootstrap.min.js" />
+    <Content Include="app\static\app\js\countdon.min.js" />
+    <Content Include="app\static\app\js\jquery-ui.min.js" />
+    <Content Include="app\static\app\js\jquery.meanmenu.js" />
+    <Content Include="app\static\app\js\jquery.nicescroll.min.js" />
+    <Content Include="app\static\app\js\jquery.treeview.js" />
+    <Content Include="app\static\app\js\lightbox.min.js" />
+    <Content Include="app\static\app\js\main.js" />
+    <Content Include="app\static\app\js\plugins.js" />
+    <Content Include="app\static\app\js\slick.min.js" />
+    <Content Include="app\static\app\js\vendor\jquery-1.12.0.min.js" />
+    <Content Include="app\static\app\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="app\static\app\js\wow.min.js" />
+    <Content Include="app\static\app\lib\css\nivo-slider.css" />
+    <Content Include="app\static\app\lib\css\preview.css" />
+    <Content Include="app\static\app\lib\home.js" />
+    <Content Include="app\static\app\lib\img\arrows-2.png" />
+    <Content Include="app\static\app\lib\img\arrows.png" />
+    <Content Include="app\static\app\lib\img\bullets-2.png" />
+    <Content Include="app\static\app\lib\img\bullets.png" />
+    <Content Include="app\static\app\lib\img\loading-2.gif" />
+    <Content Include="app\static\app\lib\img\loading.gif" />
+    <Content Include="app\static\app\lib\js\jquery.nivo.slider.js" />
+    <Content Include="app\static\app\mail.php" />
+    <Content Include="app\templates\app\registration.html" />
+    <Content Include="app\templates\app\thank-you.html" />
+    <Content Include="app\templates\registration\login.html" />
+    <Content Include="blog\templates\blog\blog.html" />
+    <Content Include="blog\templates\blog\blogpost.html" />
+    <Content Include="media\7.jpg" />
+    <Content Include="product\templates\product\detail.html" />
+    <Content Include="product\templates\product\list.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\contact.html" />
+    <Content Include="app\templates\app\index.html" />
+    <Content Include="app\templates\app\layout.html" />
+    <Content Include="app\templates\app\login.html" />
+    <Content Include="app\templates\app\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.html">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
