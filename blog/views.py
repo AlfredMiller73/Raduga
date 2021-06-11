@@ -57,9 +57,7 @@ def newpost(request):
         if blogform.is_valid():
             blog_f = blogform.save(commit=False)
             blog_f.posted = datetime.now()
-
             blog_f.save()
-
             return redirect('blog')
     else:
         blogform = BlogForm()

@@ -232,7 +232,7 @@ body {
   z-index: 99999999;
 }
 .mini-cart ul li:hover  .cart-icon {
-  color: #c8a165;
+  color: red;
 }
 /* Main-Menu */
 .menu-toggle {

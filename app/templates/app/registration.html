@@ -5,19 +5,20 @@
 
 <div class="login-area  pt-80 pb-80">
 				<div class="container">
-					<form method="POST">{% csrf_token %}	
+					<form action="" method="POST">
+						{% csrf_token %}	
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-12">
 								<div class="customer-login text-left">
 									<h4 class="title-1 title-border text-uppercase mb-30">регистрация</h4>
-									<input type="text" placeholder="Имя пользователя *" name="{{ regform.username }}">
-									<input type="password" placeholder="Пароль *" {{ regform.password1 }}>
-									<input type="password" placeholder="Повторите пароль *" {{ regform.password2 }}>
+									<label>Имя пользователя *</label>{{ regform.username }}
+									<label>Пароль *</label>{{ regform.password1 }}
+									<label>Повторите пароль *</label>{{ regform.password2 }}
 									<p class="mb-0">
 										<input type="checkbox" id="newsletter" name="newsletter" checked>
 										<label for="newsletter"><span>Запомнить меня</span></label>
 									</p>
-									<button type="submit" data-text="regiter" class="button-one submit-button mt-15">Подтвердить</button>
+									<button type="submit" data-text="Регистрация" class="button-one submit-button mt-15">Подтвердить</button>
 								</div>					
 							</div>
 						</div>

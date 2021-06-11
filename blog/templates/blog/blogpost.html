@@ -44,13 +44,12 @@
 									<div class="blog-info blog-details-info">
 										<p>{{ post_1.date }}</p>
 										<h4 class="post-title post-title-2"><a href="#">{{ post_1.title }}</a></h4>
-										
 										<p>{{ post_1.content|linebreaksbr }}</p>
 										<div class="pro-reviews mt-60">
 											<div class="customer-review mb-60">
 												<h3 class="tab-title title-border mb-30">Комментарии</h3>
+												{% for comment in comments %}
 												<ul class="product-comments clearfix">
-													{% for comment in comments %}
 													<li class="mb-30">
 														<div class="pro-reviewer">
 															<img src="{% static 'app/img/reviewer/1.jpg' %}" alt="" />
@@ -58,25 +57,25 @@
 														<div class="pro-reviewer-comment">
 															<div class="fix">
 																<div class="floatleft mbl-center">
-																	<h5 class="text-uppercase mb-0"><strong>{{comment.author}}</strong></h5>
+																	<h5 class="text-uppercase mb-0"><strong>{{ comment.author }}</strong></h5>
 																	<p class="reply-date">{{comment.date}}</p>
 																</div>
 															</div>
-															<p class="mb-0">{{comment.text|linebreaksbr}}</p>
+															<p class="mb-0">{{ comment.text|linebreaksbr }}</p>
 														</div>
 													</li>
-													{% endfor %}
 												</ul>
+												{% endfor %}
 											</div>
 											{% if user.is_authenticated %}
 											<div class="leave-review">
 												<h3 class="tab-title title-border mb-30">Оставьте свой отзыв</h3>
 												<div class="reply-box">
-													<form method="POST">
+													<form action="" method="POST">
 														{% csrf_token %}
 														<div class="row">
 															<div class="col-md-12">
-																<textarea class="custom-textarea" name="message" placeholder="Ваш отзыв..." >{{ form.text }}</textarea>
+																<textarea class="custom-textarea"  name="text" required id="id_text" placeholder="Ваш отзыв..."></textarea>
 																<button type="submit" data-text="Сохранить" class="button-one submit-button mt-20">Отправить</button>
 															</div>
 														</div>

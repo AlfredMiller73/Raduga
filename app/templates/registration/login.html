@@ -4,14 +4,15 @@
 {% block content %}
 <div class="login-area  pt-80 pb-80">
 				<div class="container">
-					<form method="POST">{% csrf_token %}
+					<form action="" method="POST">
+						{% csrf_token %}
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-12">
 								<div class="customer-login text-left">
 									<h4 class="title-1 title-border text-uppercase mb-30">Вход</h4>
-									<input type="text" placeholder="Имя пользователя *" name="email" {{ form.username }}>
-									<input type="password" placeholder="Пароль" {{ form.password }}>
-									<button type="submit" data-text="login" class="button-one submit-button mt-15">Войти</button>
+									<label>Имя пользователя *</label>{{ form.username }}
+									<label>Пароль *</label>{{ form.password }}
+									<button type="submit" data-text="Вход" class="button-one submit-button mt-15">Войти</button>
 								</div>					
 							</div>
 						</div>
