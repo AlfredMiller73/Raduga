@@ -506,7 +506,7 @@ body {
 }
 .sidebar-social  ul > li:last-child { margin-bottom: 0;}
 .sidebar-social ul > li > a {
-  color: red;
+  color: black;
   display: inline-block;
   font-size: 14px;
   line-height: 30px;
@@ -528,9 +528,9 @@ body {
 }
 .sidebar-account  ul > li:last-child { margin-bottom: 0;}
 .sidebar-account ul > li > a {
-  color: red;
+  color: black;
   display: block;
-  font-size: 14px;
+  font-size: 30px;
   line-height: 30px;
   margin: 0;
   text-align: center;
